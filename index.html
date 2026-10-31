@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Player Stats is a Minecraft player tracking dashboard for profiles, server insights, leaderboards, and community activity."
+    />
+    <title>Player Stats</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">PS</div>
+          <div>
+            <p class="eyebrow">Minecraft analytics</p>
+            <h1>Player Stats</h1>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#overview">Overview</a>
+          <a href="#leaderboards">Leaderboards</a>
+          <a href="#servers">Servers</a>
+          <a href="#community">Community</a>
+        </nav>
+
+        <button class="btn btn-secondary" type="button">Sign in</button>
+      </header>
+
+      <main>
+        <section class="hero" id="overview">
+          <div class="hero-copy">
+            <span class="badge">Live Minecraft data</span>
+            <h2>Track player progress, rankings, and server activity in real time.</h2>
+            <p>
+              Search any player, monitor uptime, compare stats, and discover which
+              servers are trending across the Minecraft community.
+            </p>
+
+            <form class="search-form" id="player-search" aria-label="Player search form">
+              <label class="sr-only" for="player-input">Search player</label>
+              <input
+                id="player-input"
+                name="player"
+                type="text"
+                placeholder="Search username or UUID"
+                value="TytusPlayz1"
+              />
+              <button class="btn btn-primary" type="submit">Lookup</button>
+            </form>
+
+            <div class="hero-stats" aria-label="Platform stats">
+              <div>
+                <strong>1.4M+</strong>
+                <span>Profiles</span>
+              </div>
+              <div>
+                <strong>92.4%</strong>
+                <span>Uptime</span>
+              </div>
+              <div>
+                <strong>12.6K</strong>
+                <span>Servers</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel" aria-live="polite">
+            <div class="panel-header">
+              <span class="online-dot"></span>
+              <span>Live player profile</span>
+            </div>
+
+            <div class="player-card">
+              <div class="avatar" aria-hidden="true">T</div>
+              <div>
+                <p class="player-tag">Player</p>
+                <h3 id="player-name">TytusPlayz1</h3>
+                <p class="player-subtitle">Java Edition • Rank #132</p>
+              </div>
+            </div>
+
+            <div class="mini-grid">
+              <article>
+                <span>Playtime</span>
+                <strong id="playtime">428h 36m</strong>
+              </article>
+              <article>
+                <span>Sessions</span>
+                <strong id="sessions">1,284</strong>
+              </article>
+              <article>
+                <span>Deaths</span>
+                <strong id="deaths">24,342</strong>
+              </article>
+              <article>
+                <span>Kills</span>
+                <strong id="kills">78,406</strong>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="metrics-strip" aria-label="Key metrics">
+          <div>
+            <span class="metric-label">Monthly players</span>
+            <strong>348,000</strong>
+          </div>
+          <div>
+            <span class="metric-label">Avg. server ping</span>
+            <strong>42ms</strong>
+          </div>
+          <div>
+            <span class="metric-label">Reward events</span>
+            <strong>1,208</strong>
+          </div>
+          <div>
+            <span class="metric-label">Guilds tracked</span>
+            <strong>8,412</strong>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel stats-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow-muted">Overview</p>
+                <h3>Season progress</h3>
+              </div>
+              <span class="pill">+18.4%</span>
+            </div>
+
+            <div class="progress-list">
+              <div class="progress-item">
+                <div class="label-row"><span>Victories</span><strong>86%</strong></div>
+                <div class="bar"><span style="width: 86%"></span></div>
+              </div>
+              <div class="progress-item">
+                <div class="label-row"><span>Challenges</span><strong>72%</strong></div>
+                <div class="bar"><span style="width: 72%"></span></div>
+              </div>
+              <div class="progress-item">
+                <div class="label-row"><span>Adventure</span><strong>63%</strong></div>
+                <div class="bar"><span style="width: 63%"></span></div>
+              </div>
+              <div class="progress-item">
+                <div class="label-row"><span>Mining</span><strong>91%</strong></div>
+                <div class="bar"><span style="width: 91%"></span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel activity-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow-muted">Recent activity</p>
+                <h3>Player timeline</h3>
+              </div>
+            </div>
+
+            <ul class="activity-list">
+              <li>
+                <span class="time">2h ago</span>
+                <div>
+                  <strong>Skyblock</strong>
+                  <p>Farming event completed</p>
+                </div>
+              </li>
+              <li>
+                <span class="time">5h ago</span>
+                <div>
+                  <strong>Hunger Games</strong>
+                  <p>Top 5 finish on PvP ladder</p>
+                </div>
+              </li>
+              <li>
+                <span class="time">12h ago</span>
+                <div>
+                  <strong>Mine Rush</strong>
+                  <p>New personal best reached</p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="leaderboard-section" id="leaderboards">
+          <div class="section-heading wide">
+            <div>
+              <p class="eyebrow-muted">Leaderboards</p>
+              <h3>Top players this week</h3>
+            </div>
+            <a href="#" class="text-link">View all rankings</a>
+          </div>
+
+          <div class="leaderboard-table-wrap panel">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Player</th>
+                  <th>Server</th>
+                  <th>Level</th>
+                  <th>Wins</th>
+                  <th>XP</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Notch</td>
+                  <td>Skyforge</td>
+                  <td>842</td>
+                  <td>412</td>
+                  <td>8.9M</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Herobrine</td>
+                  <td>Emerald Valley</td>
+                  <td>809</td>
+                  <td>384</td>
+                  <td>8.4M</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Steve</td>
+                  <td>Warden Peak</td>
+                  <td>794</td>
+                  <td>371</td>
+                  <td>8.1M</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>TytusPlayz1</td>
+                  <td>Mineverse</td>
+                  <td>781</td>
+                  <td>353</td>
+                  <td>7.8M</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="feature-section" id="servers">
+          <div class="section-heading wide">
+            <div>
+              <p class="eyebrow-muted">Features</p>
+              <h3>Built to monitor the whole Minecraft ecosystem</h3>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card panel">
+              <div class="feature-icon">⛏️</div>
+              <h4>Player lookup</h4>
+              <p>Search by username, UUID, or server profile to view rank, playtime, and achievements.</p>
+            </article>
+
+            <article class="feature-card panel">
+              <div class="feature-icon">📊</div>
+              <h4>Live tracking</h4>
+              <p>Monitor real-time stats, active sessions, and server health across regions.</p>
+            </article>
+
+            <article class="feature-card panel">
+              <div class="feature-icon">🏆</div>
+              <h4>Guild rankings</h4>
+              <p>Compare clans, guilds, and player ladders to identify top-performing communities.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
